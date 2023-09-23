@@ -11,16 +11,24 @@ class _ResponsividadeMediaQueryState extends State<ResponsividadeMediaQuery> {
   @override
   Widget build(BuildContext context) {
 
+    // Obtém a largura da tela a partir do MediaQuery
     var largura = MediaQuery.of(context).size.width;
+
+    // Obtém a altura da tela a partir do MediaQuery
     var altura = MediaQuery.of(context).size.height;
+
+    // Obtém a altura da barra de status a partir do MediaQuery
     var alturaBarraStatus = MediaQuery.of(context).padding.top;
+
+    // Obtém a altura da AppBar padrão do Material Design
     var alturaAppBar = AppBar().preferredSize.height;
-    //var larguraItem = largura * 0.25;//100%
-    var larguraItem = largura / 3;//500%
+
+    // Calcula a largura de um item com base em 1/3 da largura da tela
+    var larguraItem = largura / 3; // 33.33% da largura da tela
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Responsividade'),
+        title: const Text('Responsividade'),
       ),
       body: Row(
         children: [
@@ -28,19 +36,25 @@ class _ResponsividadeMediaQueryState extends State<ResponsividadeMediaQuery> {
             width: larguraItem,
             height: 200,
             color: Colors.red,
-            child: Text('Responsividade'),
+            child: const Center(
+              child: Text('Responsividade'),
+            ),
           ),
           Container(
             width: larguraItem,
             height: 200,
             color: Colors.black,
-            child: Text('Responsividade'),
+            child: const Center(
+              child: Text('Responsividade'),
+            ),
           ),
           Container(
             width: larguraItem,
             height: 200,
             color: Colors.yellow,
-            child: Text('Responsividade'),
+            child: const Center(
+              child: Text('Responsividade'),
+            ),
           )
         ],
       ),
