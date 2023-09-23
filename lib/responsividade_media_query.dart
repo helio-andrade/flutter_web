@@ -10,7 +10,6 @@ class ResponsividadeMediaQuery extends StatefulWidget {
 class _ResponsividadeMediaQueryState extends State<ResponsividadeMediaQuery> {
   @override
   Widget build(BuildContext context) {
-
     // Obtém a largura da tela a partir do MediaQuery
     var largura = MediaQuery.of(context).size.width;
 
@@ -37,7 +36,10 @@ class _ResponsividadeMediaQueryState extends State<ResponsividadeMediaQuery> {
             height: 200,
             color: Colors.red,
             child: const Center(
-              child: Text('Responsividade'),
+              child: Text(
+                'Responsividade',
+                style: TextStyle(color: Colors.white), // Define a cor do texto
+              ),
             ),
           ),
           Container(
@@ -45,7 +47,10 @@ class _ResponsividadeMediaQueryState extends State<ResponsividadeMediaQuery> {
             height: 200,
             color: Colors.black,
             child: const Center(
-              child: Text('Responsividade'),
+              child: Text(
+                'Responsividade',
+                style: TextStyle(color: Colors.white), // Define a cor do texto
+              ),
             ),
           ),
           Container(
@@ -53,7 +58,10 @@ class _ResponsividadeMediaQueryState extends State<ResponsividadeMediaQuery> {
             height: 200,
             color: Colors.yellow,
             child: const Center(
-              child: Text('Responsividade'),
+              child: Text(
+                'Responsividade',
+                style: TextStyle(color: Colors.blue), // Define a cor do texto
+              ),
             ),
           )
         ],
